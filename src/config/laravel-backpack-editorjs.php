@@ -87,6 +87,7 @@ return [
             ],
             'table' => [
                 'withHeadings' => 'boolean',
+                'stretched' => 'boolean',
                 'content' => [
                     'type' => 'array',
                     'data' => [
