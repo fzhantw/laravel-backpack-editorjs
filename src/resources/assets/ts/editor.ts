@@ -9,6 +9,8 @@ import EditorjsList from '@editorjs/list';
 import Paragraph from '@editorjs/paragraph';
 import Raw from '@editorjs/raw';
 import Checklist from '@editorjs/checklist';
+import Table from '@editorjs/table';
+
 
 const csrfToken = document?.querySelector('meta[name="csrf-token"]')?.getAttribute("content");
 
@@ -79,6 +81,14 @@ export function editor(props: Props) {
         inlineToolbar: true
       },
       // checklist: Checklist
+      table: {
+          class: Table as any,
+          inlineToolbar: true,
+          config: {
+              rows: 3,
+              cols: 3,
+          },
+      }
     },
     onChange: (_api, _event) => {
       editor
